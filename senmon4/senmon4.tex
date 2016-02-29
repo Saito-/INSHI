@@ -1,0 +1,858 @@
+\documentclass[a4j, titlepage, 11pt]{jsarticle}
+
+\usepackage{fancybox}
+\usepackage{ascmac}
+\usepackage{amsmath}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{float}
+
+\setlength\abovecaptionskip{5pt} 
+\setlength\belowcaptionskip{5pt}
+\setlength\textfloatsep{5pt}
+\setlength\intextsep{5pt}
+
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+
+\setcounter{tocdepth}{3}
+
+\def\vector#1{\mbox{\boldmath $#1$}}
+
+%% 高さの設定 %%
+\setlength{\textheight}{\paperheight}   % ひとまず紙面を本文領域に
+\setlength{\topmargin}{-24truemm}      % 上の余白を20mm(=1inch-0.4mm)に
+\addtolength{\topmargin}{-\headheight}  % 
+\addtolength{\topmargin}{-\headsep}     % ヘッダの分だけ本文領域を移動させる
+\addtolength{\textheight}{-24truemm}    % 下の余白も20mmに
+
+%%  幅の設定 %%
+\setlength{\textwidth}{\paperwidth}     % 紙面横幅を本文領域にする（RIGHT=-LEFT）
+\setlength{\oddsidemargin}{-20truemm}  % 左の余白を25mm(=1inch-0.4mm)に
+\setlength{\evensidemargin}{-0.4truemm} % 
+\addtolength{\textwidth}{-20truemm}     % 右の余白も25mm（RIGHT=-LEFT）
+
+%% プリアンプル部 %%
+
+\begin{document}
+
+\title{創造情報学専攻 専門科目 問4対策}
+\author{@SythonUK}
+\date{\today}
+
+\maketitle
+
+\tableofcontents
+\clearpage
+
+\section{既出問題}
+\begin{multicols}{2}
+\begin{itemize}
+	\item スーパースカラ
+	\item 半加算器
+	\item キャリー・ルック・アヘッド
+	\item TLB
+	\item パイプラインハザード
+	\item マイクロプログラム制御
+	\item スヌープキャッシュ
+	\item アウトオブオーダ実行
+	\item RISCとCISC
+	\item プロセスとスレッド
+	\item クロスサイトスクリプティング
+	\item 公開鍵暗号
+	\item PKI
+	\item ユーザ認証 (個人識別) 法
+	\item フィッシング
+	\item 公開鍵のディジタル署名
+	\item PWM制御
+	\item ステップ応答と伝達関数
+	\item カルマンフィルタ
+	\item フィードバック/フォワード制御
+	\item $\mathrm{H}^{\infty}$制御
+	\item サーボ系の位置とトルクフィードバック
+	\item インパルス応答とステップ応答
+	\item PID制御
+	\item 交流回路のインピーダンス
+	\item 実行時コンパイラ
+	\item クロージャ
+	\item 有限オートマトン
+	\item 末尾再帰
+	\item LL(1)構文解析
+	\item 高階関数
+	\item 関係データベースの正規化
+	\item チューリングマシン
+	\item リフレクション
+	\item 参照透明性
+	\item 正規文法と正規言語
+	\item 関数型言語
+	\item 自然言語の形態素
+	\item 関係データベースの結合演算
+	\item 文脈自由文法
+	\item 論理型言語
+	\item サポートベクターマシン
+	\item tf-idf
+	\item ベイジアンネットワーク
+	\item ニューラルネットの学習
+	\item 主成分分析
+	\item ベイズの定理
+	\item 決定木の学習
+	\item 隠れマルコフモデル
+	\item ベクトル量子化
+	\item 意味ネットワーク
+	\item 最尤推定法
+	\item 中心極限定理
+	\item ひずみゲージ
+	\item 不確かさ
+	\item 近接覚センサの原理
+	\item 同時座標系
+	\item グローシェーディング
+	\item フォンシェーディング
+	\item モンテカルロ法
+	\item 分割統治法
+	\item B木
+	\item 分枝限定法
+	\item ヒープソート
+	\item 分散ハッシュ
+	\item DNS
+	\item クライアントサーバシステム
+	\item P2Pシステム
+	\item AS番号
+	\item スペクトル拡散通信
+	\item Unicode
+	\item グリッドコンピューティング
+	\item CGI
+	\item TCPとUDP
+	\item オプティカルフロー
+	\item 離散コサイン変換
+	\item 画像のエッジ検出法
+	\item ナイキスト周波数
+	\item サンプリング定理
+	\item GIFとJPEGの符号化
+	\item ハフ変換
+	\item ラプラス変換
+\end{itemize}
+\end{multicols}
+
+\section{プログラミング}
+\begin{multicols}{2}
+\begin{itemize}
+	\item プリプロセッサ
+	\item コンパイラ
+	\item アセンブラ
+	\item アセンブリ言語
+	\item ニーモニック
+	\item リンカ (リンケージエディタ)
+	\item インタプリタ
+	\item デバッガ
+	\item オブジェクト指向
+	\item クラス変数とインスタンス変数
+	\item 継承と継承
+	\item オーバーライドとオーバーロード
+	\item ポリモーフィズム
+	\item イミュータブル
+	\item ジェネリックプログラミング
+	\item 命令型(手続き型)プログラミング
+	\item 宣言型プログラミング
+	\item 構造化プログラミング
+	\item メタプログラミング
+	\item 論理プログラミング
+	\item イベント駆動型プログラミング
+	\item ドメイン固有言語
+	\item スクリプト言語
+	\item マクロ言語
+	\item マークアップ言語
+	\item HTML
+	\item XML
+	\item 動的型付けと静的型付け
+	\item 動的スコープと静的スコープ
+	\item 動的リンクと静的リンク
+	\item ダックタイピング
+	\item メモ化
+	\item 自己書き換えコード
+	\item シリアライズ
+	\item 評価戦略
+	\item 多重ディスパッチ (マルチメソッド)
+	\item 糖衣構文
+	\item ラムダ計算
+	\item 表明 (アサーション)
+	\item モナド
+	\item ガベージコレクション
+	\item マークアンドスイープ
+	\item 参照カウント
+	\item 名前修飾
+	\item 弱い参照
+	\item ランタイムライブラリ
+	\item リファクタリング
+	\item API
+	\item 第一級オブジェクト
+	\item バイトコード
+	\item プラグイン
+	\item スレッドセーフ
+	\item リエントラント
+	\item メインループ (イベントループ)
+	\item 呼び出し規約
+	\item バッファオーバーラン
+	\item 副作用
+	\item スパゲティプログラム
+\end{itemize}
+\end{multicols}
+
+\section{言語理論}
+\begin{multicols}{2}
+\begin{itemize}
+	\item チョムスキー階層
+	\item バッカスナウア記法 (BNF)
+	\item チョムスキー標準形
+	\item グライバッハ標準形
+	\item 形式文法と形式言語
+	\item 字句解析
+	\item lexとyacc
+	\item 構文解析
+	\item 曖昧な文法
+	\item 抽象構文木
+	\item LR構文解析
+	\item クロスコンパイラ
+	\item プッシュダウンオートマトン
+	\item CYK法
+	\item アーリー法
+	\item マルコフアルゴリズム
+	\item カリー化
+	\item 機能的再帰関数 ($\mu$関数)
+\end{itemize}
+\end{multicols}
+
+\clearpage
+
+\section{データベース}
+\begin{multicols}{2}
+\begin{itemize}
+ 	\item 関係モデル
+	\item データモデル
+	\item E-Rモデル
+	\item 関係演算
+	\item 論理表現と物理表現
+	\item データベース言語
+	\item データベース管理システム
+	\item 3層スキーマ
+	\item トランザクション
+	\item トランザクション分離レベル
+	\item ACID特性
+	\item ロールフォワードとロールバック
+	\item 再編成と再構築
+	\item ジャーナルファイル
+	\item データウェアハウス
+	\item 一元管理とその利点
+	\item NULL値
+	\item 更新時異常
+\end{itemize}
+\end{multicols}
+
+\section{ソフトウェア開発}
+\begin{multicols}{2}
+\begin{itemize}
+	\item アジャイルソフトウェア開発
+	\item ソフトウェアインスペクション
+	\item 形式仕様記述
+	\item UML
+	\item Rapid Application Development
+	\item オープンソースソフトウェア
+	\item クロスプラットフォーム
+	\item 動的プログラム解析
+	\item 統合開発環境
+	\item フロントエンドとバックエンド
+	\item モジュール
+	\item リバースエンジニアリング
+	\item 契約プログラミング
+	\item アンチパターン
+	\item デザインパターン
+	\item 凝集度 (コヒージョン)
+	\item 結合度
+	\item 粒度
+	\item 移植性
+	\item ブラックボックスとホワイトボックス
+\end{itemize}
+\end{multicols}
+
+\section{多変量解析と人工知能}
+\begin{multicols}{2}
+\begin{itemize}
+	\item 傾向推定
+	\item データクラスタリング
+	\item エキスパートシステム
+	\item データマイニング
+	\item 因子分析
+	\item 判別分析
+	\item 正準相関分析
+	\item オートエンコーダー
+	\item ディープラーニング
+	\item $k$近傍法
+	\item 過剰適合
+	\item 交差検証
+	\item ブースティング
+	\item ロジスティック回帰
+	\item パーセプトロン
+	\item シグモイド関数
+	\item Q学習
+	\item 自己組織化写像
+	\item 集団的知性
+	\item ベイズ誤り率
+	\item 赤池情報量基準
+	\item ブートストラップ法
+	\item マハラノビス距離
+	\item コーパス
+	\item Neuroevolution
+	\item ハイパーパラメータ
+	\item 次元の呪い
+	\item フレーム問題
+	\item 人工無脳
+	\item ソフトウェアエージェント
+\end{itemize}
+\end{multicols}
+
+\clearpage
+
+\section{データ構造とアルゴリズム}
+\begin{multicols}{2}
+\begin{itemize}
+	\item 逆ポーランド記法とポーランド記法
+	\item 優先度付きキュー
+	\item ハッシュ関数
+	\item チャイティンの定数 (停止確率)
+	\item クラスPとクラスNP
+	\item P $\neq$ NP予想
+	\item コルモゴロフ複雑性
+	\item 充足可能性問題
+	\item 停止性問題
+	\item ソートの安定性
+	\item 内部ソートと外部ソート
+	\item マトロイド
+	\item 反復深化深さ優先探索
+	\item 深さ制限探索
+	\item 最良優先探索
+	\item 双方向探索
+	\item 均一コスト探索
+	\item $\mathrm{A}^{*}$アルゴリズム
+	\item BM法
+	\item KMP法
+	\item ノーフリーランチ定理
+	\item 線形計画法
+	\item 整数計画問題
+	\item シンプレックス法
+	\item Nelder-Mead法
+	\item 最急降下法
+	\item 共役勾配法
+	\item 動的計画法
+	\item 貪欲法
+	\item ラグランジュの未定乗数法
+	\item バックトラッキング
+	\item ビタビアルゴリズム
+	\item ヒューリスティクス
+	\item 焼きなまし法
+	\item タブーサーチ
+	\item 粒子群最適化
+	\item 蟻コロニー最適化
+	\item 近似アルゴリズム
+	\item 遺伝的アルゴリズム
+	\item 最大フロー問題
+	\item ギフト包装法
+	\item ゲーム木
+	\item ミニマックス法	
+	\item $\alpha \beta$法
+	\item ミラーラビン素数判定法
+	\item テイラー展開
+	\item 最小二乗法
+	\item LU分解
+	\item 線形合同法
+	\item メルセンヌツイスタ
+	\item メトロポリス法
+	\item 特異値分解
+\end{itemize}
+\end{multicols}
+
+\section{コンピュータグラフィクス}
+\begin{multicols}{2}
+\begin{itemize}
+	\item フラクタル
+	\item パーティクル
+	\item メタボール
+	\item レイトレーシング
+	\item バンプマッピング
+	\item 透視投影と平行投影
+	\item ARとVR
+	\item ブレゼンハムのアルゴリズム
+	\item ダブルバッファ方式
+	\item アフィン変換
+	\item ワイヤフレームモデル
+	\item サーフェスモデル
+	\item CSG
+	\item NURBS
+	\item ポリゴン
+	\item サブディビジョンサーフェス(細分割曲面)
+	\item Zバッファ
+	\item バイナリ空間分割
+	\item 光モデル
+	\item ラジオシティ
+	\item マーチングキューブ法
+	\item モーションブラー
+	\item モーフィング
+	\item GPU
+\end{itemize}
+\end{multicols}
+
+\clearpage
+
+\section{コンピュータアーキテクチャ}
+\begin{multicols}{2}
+\begin{itemize}
+	\item マイクロアーキテクチャ
+	\item バイナリ変換
+	\item コード密度
+	\item オープンアーキテクチャ
+	\item ノイマン型コンピュータ
+	\item ノイマンボトルネック
+	\item DNAコンピュータ
+	\item 量子コンピュータ
+	\item 設定ファイル
+	\item ハードウェア記述言語
+	\item メタデータ
+	\item ウェアレベリング
+	\item リアルタイムシステム
+	\item ウォッチドッグタイマ
+	\item 透過性
+	\item フォールトトレラント
+	\item GUIとCUI
+	\item ムーアの法則
+	\item アムダールの法則
+	\item グロシュの法則
+	\item ベンチマーク
+	\item RFID
+	\item シフトレジスタ
+	\item 抽象化
+	\item ステータスレジスタ
+	\item メモリマップトI/O
+	\item I/OマップトI/O (ポートマップトI/O)
+	\item DMA
+	\item コントロールストア
+	\item ビジーウェイト (ポーリング)
+	\item 割込み
+	\item 割込みハンドラ
+	\item デバイスドライバ
+	\item カーネル
+	\item シェル
+	\item システムコール
+	\item プロセス制御ブロック
+	\item CPUモードとユーザモード
+	\item 実行ファイル
+	\item コンテキストスイッチ
+	\item マルチタスク
+	\item プリエンプション
+	\item ラウンドロビンスケジューリング
+	\item 排他制御
+	\item 競合状態
+	\item デッドロック
+	\item 食事する哲学者の問題
+	\item リソーススタベーション
+	\item クリティカルセクション
+	\item 不可分操作
+	\item テストアンドセット
+	\item コンペアアンドスワップ
+	\item デッカーのアルゴリズム
+	\item 互換性
+	\item ロック
+	\item スピンロック
+	\item セマフォ
+	\item モニタ
+	\item ページ方式とセグメント方式
+	\item アドレス空間
+	\item MMU
+	\item ページテーブル
+	\item ページフォールト
+	\item セグメンテーション違反
+	\item 仮想記憶
+	\item ページ置換アルゴリズム
+	\item LRU
+	\item 参照の局所性
+	\item 補助記憶装置
+	\item ファイルシステム
+	\item フラグメンテーション
+	\item メインフレーム
+	\item フレームバッファ
+	\item スループット
+	\item MIPS
+	\item FLOPS
+	\item 命令セット
+	\item テーブルジャンプ
+	\item プログラムカウンタ
+	\item コールスタック
+	\item コアダンプ
+	\item アドレッシングモード
+	\item インライン展開
+	\item アキュムレータ
+	\item 2進化10進数 (BCD)	
+	\item 符号付き数値表現
+	\item 可変長数値表現	
+	\item 単精度と倍精度
+	\item 丸め誤差
+	\item 桁落ち誤差
+	\item 算術シフトと論理シフト
+	\item 非正規化数
+	\item NaN
+	\item 文字コード
+	\item JISコード
+	\item ASCII
+	\item バレルシフタ
+	\item ALU
+	\item FPU
+	\item ブースの乗算アルゴリズム
+	\item キャリーセーブアダー
+	\item 演算子強度低減
+	\item SRT除算
+	\item スティッキービット
+	\item コプロセッサ
+	\item レジスタファイル
+	\item 例外処理
+	\item VLIW
+	\item データ依存
+	\item ワイヤードロジック
+	\item ソフトウェアパイプライニング
+	\item ループ展開
+	\item 投機的実行
+	\item レベル適応型分岐予測
+	\item 遅延スロット
+	\item プリフェッチ
+	\item リザベーションステーション
+	\item メモリバリア
+	\item レジスタリネーミング
+	\item ファームウェア
+	\item FPGA
+	\item RAMとROM
+	\item SRAMとDRAM
+	\item SDRAM
+	\item キャッシュミスの3C
+	\item ダイレクトマップ方式
+	\item セットアソシアティブ方式
+	\item フルアソシアティブ方式
+	\item スラッシング
+	\item キャッシュコヒーレンシ
+	\item ライトスルーとライトバック
+	\item メモリインタリーブ
+	\item L2キャッシュ (2次キャッシュ)
+	\item プロセス識別子
+	\item ノンブロッキングキャッシュ
+	\item DIMM
+	\item バックプレーン
+	\item シンクロナイザ
+	\item デファクトスタンダード
+	\item SCSI
+	\item PCI
+	\item USB
+	\item デイジーチェーン
+	\item RAID
+	\item ディスクアレイ
+	\item 再構成可能コンピューティング
+	\item 分散コンピューティング
+	\item 分散共有記憶 (DSM)
+	\item シンクライアント
+	\item デスクトップ仮想化
+	\item マルチプロセッサとマルチコア
+	\item 対称型マルチプロセッシング
+	\item ハードウェアマルチスレッディング
+	\item NUMA
+	\item コンピュータクラスタ
+	\item メッセージ交換
+	\item バリア同期
+	\item MESIプロトコル
+	\item 超並列マシン
+	\item フリンの分類
+	\item 性能解析 (プロファイラ)
+	\item 仮想機械
+	\item ハイパーバイザ
+	\item エミュレータ
+	\item 準仮想化
+	\item GPGPU
+\end{itemize}
+\end{multicols}
+
+
+\clearpage
+\section{暗号理論とセキュリティ}
+\begin{multicols}{2}
+\begin{itemize}
+	\item 安全素数
+	\item Sボックス
+	\item ステガノグラフィー
+	\item 一方向性関数
+	\item 暗号学的ハッシュ関数
+	\item ゼロ知識証明
+	\item 電子署名
+	\item S/MIME
+	\item セキュリティのCIA
+	\item サンドボックス	
+	\item 最小権限の原則
+	\item ワンタイムパスワード
+	\item 計算量的安全性
+	\item 情報理論的安全性
+	\item ケーパビリティ
+	\item アクセス制御リスト
+	\item ハードコア述語
+	\item ワンタイムパッド
+	\item 証明書失効リスト
+	\item セキュリティホール
+	\item 換字式暗号
+	\item 転置式暗号
+	\item DES
+	\item ブロック暗号
+	\item ストリーム暗号
+	\item RSA暗号
+	\item 差分解読法
+	\item 線形解読法
+	\item 頻度分析
+	\item 締め上げ暗号分析
+	\item 辞書攻撃
+	\item DoS攻撃とDDoS攻撃
+	\item 総当たり攻撃
+	\item 誕生日攻撃
+	\item 反射攻撃
+	\item 暗号文単独攻撃
+	\item ゼロデイ攻撃
+	\item Fork爆弾
+	\item SQLインジェクション
+	\item DNSキャッシュポイゾニング
+	\item サイドチャネル攻撃
+	\item ゾンビコンピュータ
+	\item コンピュータウイルス
+	\item ブートストラップウイルス
+	\item マクロウイルス
+	\item ワーム
+	\item スパムメール
+	\item ボットによる攻撃
+	\item トロイの木馬
+	\item スパイウェア
+	\item ファーミング
+	\item ワンクリックウェア
+	\item ソーシャルエンジニアリング
+	\item スキミング
+\end{itemize}
+\end{multicols}
+
+\section{メカトロニクス}
+\begin{multicols}{2}
+\begin{itemize}
+	\item アクチュエータ
+	\item ポテンショメータ
+	\item ロータリエンコーダ
+	\item サイリスタ
+	\item サーミスタ
+	\item マニピュレータ
+	\item ステッピングモータ (パルスモータ)
+	\item リーク電流
+	\item チャタリング
+	\item 能動回路と受動回路
+	\item 分布定数回路
+	\item 水晶振動子
+	\item MEMS
+	\item CMOS
+	\item ECL
+	\item LED
+	\item PLL
+	\item 分解能
+	\item 測域センサ
+	\item トレーサビリティ
+\end{itemize}
+\end{multicols}
+
+\clearpage
+\section{コンピュータネットワーク}
+\begin{multicols}{3}
+\begin{itemize}
+	\item LAN, WAN, PAN
+	\item Ethernet
+	\item MIMO
+	\item ARPANET
+	\item OSI参照モデル
+	\item エンドツーエンド原理
+	\item オーバレイネットワーク
+	\item 電力線搬送通信
+	\item 回線交換
+	\item 同期方式
+	\item ガードインターバル
+	\item 前方誤り訂正
+	\item ADSL
+	\item CSMA/CAとCSMA/CD
+	\item ストリーミング
+	\item 非同期転送モード
+	\item フレームリレー
+	\item FTTH
+	\item 輻輳制御
+	\item 自動再送要求
+	\item 肯定要求 (ACK)
+	\item VPN
+	\item Ajax
+	\item CIDR
+	\item ネットワークアドレス変換
+	\item クラウドコンピューティング
+	\item プロキシサーバ
+	\item リバースプロキシ
+	\item イントラネット
+	\item エクストラネット
+	\item ルーティングプロトコル
+	\item OSPF
+	\item EIGRP
+	\item RIP
+	\item BGP
+	\item モデム
+	\item ISDN
+	\item リピータ
+	\item スイッチングハブ
+	\item ネットワークカード (NIC)
+	\item SIMカード
+	\item TCP/IP
+	\item 3ウェイハンドシェイク
+	\item DHCP
+	\item FTP
+	\item HTTP
+	\item IMAP
+	\item IRC
+	\item LDAP
+	\item MGCP
+	\item NNTP
+	\item NTP
+	\item POP
+	\item RPC
+	\item RTP
+	\item SIP
+	\item SMTP
+	\item SNMP
+	\item SSH
+	\item Telnet
+	\item TFTP
+	\item SSL
+	\item XMPP
+	\item SCTP
+	\item RSVP
+	\item IPv4とIPv6
+	\item IPフラグメンテーション
+	\item ICMP
+	\item IGMP
+	\item IPSec
+	\item VoIP
+	\item Mobile IP
+	\item RADIUS
+	\item ARPとRARP
+	\item トンネリング
+	\item SPB
+	\item PPP
+	\item メディアアクセス制御
+	\item ファイアウォール
+	\item 非武装地帯 (DMZ)
+	\item ホスト名
+	\item ドメイン名とサブドメイン名
+	\item サブネットマスク
+	\item ラウンドトリップタイム
+	\item ローミング
+	\item ASP
+	\item WWW
+	\item URL
+	\item ハイパーテキスト
+	\item ハイパーリンク
+	\item SNS
+	\item コンテンツデリバリネットワーク
+	\item VPS
+	\item IaaS, PaaS, SaaS
+	\item GPS
+	\item GSM
+	\item ACD
+	\item Wi-Fi
+	\item LTE
+	\item WiMAX
+	\item サービスセット識別子 (SSID)
+\end{itemize}
+\end{multicols}
+
+\clearpage
+
+\section{情報通信理論}
+\begin{multicols}{2}
+\begin{itemize}
+	\item 情報量 (エントロピー)
+	\item 結合エントロピー
+	\item 相互情報量
+	\item マルコフ過程
+	\item レイテンシ
+	\item SN比
+	\item 符号誤り率
+	\item スペクトル効率
+	\item 通信路容量
+	\item シャノン=ハートレーの定理
+	\item 冗長性
+	\item エンコードとデコード
+	\item 巡回冗長検査
+	\item 誤り訂正符号
+	\item チェックサム
+	\item パリティ検査符号
+	\item ハフマン符号
+	\item ハミング符号
+	\item リードソロモン符号
+	\item BCH符号
+	\item 畳み込み符号
+	\item ターボ符号
+	\item 8B/10B
+	\item 振幅変調
+	\item 周波数変調
+	\item 位相変調
+	\item 位相偏移変調
+	\item パルス符号変調
+	\item 空間分割多重
+	\item 周波数分割多重
+	\item 時間多重
+	\item 符号多重
+	\item 直交周波数分割多重 (OFDM)
+	\item 符号分割多重接続 (CDMA)
+\end{itemize}
+\end{multicols}
+
+\section{信号画像処理}
+\begin{multicols}{2}
+\begin{itemize}
+	\item ウェーブレット変換
+	\item Z変換
+	\item 双一次変換
+	\item 高速フーリエ変換
+	\item アダマール変換
+	\item 無限インパルス応答
+	\item スペクトル密度
+	\item ハイパス/ローパスフィルタ
+	\item 連長圧縮
+	\item 窓関数
+	\item ホワイトノイズとピンクノイズ
+	\item 解像度
+	\item ダイナミックレンジ
+	\item ピーク信号対雑音比
+	\item アスペクト比
+	\item YUV色空間
+	\item HSV色空間
+	\item テンプレートマッチング
+\end{itemize}
+\end{multicols}
+
+\section{制御工学}
+\begin{multicols}{2}
+\begin{itemize}
+	\item ラウス・フルビッツの安定判別法
+	\item ファジィ制御
+	\item ボード線図
+	\item ナイキスト線図
+	\item ニコルズ線図
+	\item 状態空間
+	\item 可制御性と可観測性
+	\item 有界入力有界出力安定性
+	\item 状態観測器
+	\item 時不変システム
+	\item オンオフ制御
+	\item ヒステリシス
+	\item プログラマブルロジックコントローラ
+	\item リアプノフ関数
+\end{itemize}
+\end{multicols}
+\end{document}
